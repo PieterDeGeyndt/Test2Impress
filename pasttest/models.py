@@ -7,3 +7,6 @@ class Pasttest(models.Model):
     testend = models.DateField(name='Project End')
     testbody = models.TextField(name='Project Body') 
     testquotes = models.TextField(name='Project Quotes')
+
+    def __str__(self):
+        return self.testtitle

@@ -7,3 +7,6 @@ class Who(models.Model):
     whodob = models.DateField(name='Date of Birth')
     whobody = models.TextField(name = 'Who am I')
     whocertifications = models.TextField(name = 'Cerftifications')
+
+    def __str__(self):
+        return self.whofirstname
