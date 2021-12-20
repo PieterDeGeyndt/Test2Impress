@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Cover Template · Bootstrap v5.1</title>
+    <title>Test2Impress</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
@@ -40,36 +40,56 @@
           font-size: 3.5rem;
         }
       }
+      
+      .backgroundmenu {
+          background: #04050d;
+      }
+      .backgroundmain {
+          background: #7D8C84;
+      }
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.1/examples/cover/cover.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
+
+<body class="d-flex h-100 w-100 text-center text-white backgroundmain">
+  <div class="d-flex w-100 h-100 p-0 mx-auto flex-column">    
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
+    <!-- Menu -->
+  <header class="mb-auto mx-10 mt-0">
+    <nav class="navbar px-5 navbar-expand-lg navbar-dark backgroundmenu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="navbarlogo" src=""><b>Test2Impress</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
+                    <a class="nav-link px-2" href="#">Who are we</a>
+                    <a class="nav-link px-2" href="#">What do we offer</a>
+                    <a class="nav-link px-2" href="#">What did we do</a>
+                    <a class="nav-link px-2" href="#">Where to find us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
   </header>
 
+  <!-- Page -->
+  <img class="d-flex w-50 h-50 p-5 mx-10" src="{{ homeinfo.background.url ]}">
   <main class="px-3">
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <h1>Welcome to Test2Impress</h1>
+    <p class="lead"></p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Go Explore!</a>
     </p>
   </main>
-
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  <!-- Footer -->
+  <footer class="mt-auto text-black-50">
+    <p>&copy;<a href="https://www.Test2Impress.be/" class="text-black">Test2Impress</a> - {% now "Y" %}.</p>
   </footer>
 </div>
 

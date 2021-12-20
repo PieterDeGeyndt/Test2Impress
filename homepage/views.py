@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Homepage
 
 def home(request):
-        return render(request, 'homepage/home.html')
+        homeinfo = Homepage.objects
+        return render(request, 'homepage/home.html', {'homeinfo' : homeinfo})
