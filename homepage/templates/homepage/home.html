@@ -56,7 +56,7 @@
 
 <body class="d-flex h-100 w-100 text-center text-white backgroundmain">
   <div class="d-flex w-100 h-100 p-0 mx-auto flex-column">    
-    
+    {% for home in homes.all %}  
     <!-- Menu -->
   <header class="mb-auto mx-10 mt-0">
     <nav class="navbar px-5 navbar-expand-lg navbar-dark backgroundmenu">
@@ -79,14 +79,14 @@
   </header>
 
   <!-- Page -->
-  {% for home in homes.all%}
-  <img class="d-flex w-50 h-50 p-5 mx-10" src="{{ home.background.url ]}">
+  
+  <img class="img-fluid" src="{{ home.background.url }}"><title>Placeholder</title><img>
   <main class="px-3">
     <h1>Welcome to {{home.title}}</h1>
     <p class="lead"></p>
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Go Explore!</a>
-  {% endfor%}
+  {% endfor %}
     </p>
   </main>
   <!-- Footer -->
