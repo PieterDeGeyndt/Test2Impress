@@ -4,53 +4,9 @@
     {% load static %}
 <head>
 <style>
-/* Colors*/
-/*Backgroundcolors*/
-.bglightyellow {
-        background: #eff2d8;
-      }
-
-    .bgyellow {
-        background: #d4d9c1;
-      }
-   
-    .bggreen {
-        background: #7d8c84;
-      }
-
-    .bgblue {
-        background: #2c3540;
-      }
-    
-    .bgdarkblue {
-        background: #04050d;
-      }
-
-/* Textcolors */
-    .lightyellow {
-        color:#eff2d8;
-    }
-
-    .yellow {
-        color:#d4d9c1;
-    }
-
-    .green {
-        color:#7d8c84;
-    }
-
-    .blue {
-        color:#2c3540;
-    }
-
-    .darkblue {
-        color:#04050d;
-    }
-
-/* End of colors*/
-
+  
 body {
-  background-color: #7d8c84;
+  background-color: #000;
 
   overflow-x: hidden;
 }
@@ -110,13 +66,18 @@ img {
 }
 .ag-timeline_tagline {
   font-size: 40px;
-  color: #04050d;
+  color: rgb(84, 89, 95);
 }
-
 .ag-timeline_title {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
-  color: #eff2d8;
+  text-fill-color: transparent;
+  color: transparent;
 
   font-size: 80px;
 }
@@ -159,7 +120,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: #eff2d8;
+  background-color: #FF0;
 }
 
 .ag-timeline-card_box {
@@ -179,7 +140,7 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid #eff2d8;
+  border: 3px solid #FF0;
   background-color: #1d1d1b;
 
   text-align: center;
@@ -193,7 +154,7 @@ img {
 }
 .js-ag-active .ag-timeline-card_point {
   color: #1d1d1b;
-  background-color: #eff2d8;
+  background-color: #FF0;
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -204,7 +165,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: #eff2d8;
+  color: #FF0;
 }
 .ag-timeline-card_item {
   display: inline-block;
@@ -398,11 +359,10 @@ img {
 </head>
 
 <body>
-  
   <div class="ag-timeline-block">
     <div class="ag-timeline_title-box">
-      <div class="ag-timeline_tagline">Past Projects</div>
-      <div class="ag-timeline_title">In Testing</div>
+      <div class="ag-timeline_tagline">Timeline</div>
+      <div class="ag-timeline_title">No Flex</div>
     </div>
     <section class="ag-section">
       <div class="ag-format-container">
@@ -439,6 +399,7 @@ img {
                 <div class="ag-timeline-card_arrow"></div>
               </div>
             </div>
+  
 
 
  <!--end of cards-->           
