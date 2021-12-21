@@ -2,4 +2,5 @@ from django.shortcuts import render
 from .models import Pasttest
 
 def test(request):
-    return render(request, 'pasttest/test.html')
+    projects=Pasttest.objects
+    return render(request, 'homepage/home.html', {'projecs' : projects})
