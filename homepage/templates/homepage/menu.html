@@ -96,19 +96,9 @@
         width:80%;
         height:80%;
         z-index: 0;
-        margin-top: -15vh;
+        margin-top: 5vh;
         object-fit:fill;
-        position:inherit;
-    }
-
-    .phoneicon {
-      font-size:10vw;
-      color: green;
-      z-index: 1;
-      left:10%;
-      top:60%;
-      position:sticky;
-      z-index:1;
+        position:relative;
     }
 
     .button {
@@ -153,11 +143,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link px-2" aria-current="page" href="{% url 'home' %}">Logo</a>
-                    <a class="nav-link px-2" href="#">Who are we</a>
-                    <a class="nav-link active px-2" href="#">What do we offer</a>
-                    <a class="nav-link px-2" href="#">What did we do</a>
-                    <a class="nav-link px-2" href="#">Where to find us</a>
+                    <a class="nav-link px-2" aria-current="page" href="{% url 'home' %}">Start</a>
+                    <a class="nav-link active px-2" href="#">Overview</a>
+                    <a class="nav-link px-2" href="{% url 'test'%}">Testing</a>
+                    <a class="nav-link px-2" href="#">Webdevelopment</a>
+                    <a class="nav-link px-2" href="#">About</a>
                 </div>
             </div>
         </div>
@@ -186,7 +176,7 @@
         </a>
       </div>
     
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="bgyellow mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 py-3">
           <h2 class="darkblue display-5"><b>Test2Impress</b></h2>
           <p class="lead">Found what you're looking for? Let's get in touch!</p>
@@ -194,13 +184,13 @@
           <br/>
         </div>
         <a href="#">
-        <div class="bg-dark box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><i class="phoneicon fas fa-phone-alt"></i><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
+        <div class="bg-dark box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
         </a>
       </div>
     </div>
      
     <!--Footer -->
-    <footer class="d-flex justify-content-center bgblue text-white-50">
+    <footer class="d-flex justify-content-center bgdarkblue text-white-50">
         <p>&copy;<a href="https://www.Test2Impress.be/" class="afooter text-white">Test2Impress</a> - {% now "Y" %}.</p>
     </footer>
 </body>
