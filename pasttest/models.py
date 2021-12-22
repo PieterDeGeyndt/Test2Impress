@@ -11,3 +11,9 @@ class Pasttest(models.Model):
 
     def __str__(self):
         return self.testtitle
+    
+    def get_year(self):
+        date=Pasttest.teststart.date()
+        year=date[:4]
+        return year
+        

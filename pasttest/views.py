@@ -3,4 +3,5 @@ from .models import Pasttest
 
 def test(request):
     projects=Pasttest.objects
-    return render(request, 'homepage/home.html', {'projecs' : projects})
+    year=Pasttest.get_year
+    return render(request, 'pasttest/test.html', {'projects' : projects}, {'year': year})
