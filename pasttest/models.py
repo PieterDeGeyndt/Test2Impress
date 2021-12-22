@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from datetime import date
 
 class Pasttest(models.Model):
     testimg = models.ImageField(upload_to="pasttestmedia/projimage/",default="")
@@ -12,8 +13,16 @@ class Pasttest(models.Model):
     def __str__(self):
         return self.testtitle
     
-    def get_year(self):
-        date=Pasttest.teststart.date()
-        year=date[:4]
-        return year
-        
+    def yearstart(self):
+        return self.teststart.strftime('%Y')
+    
+    def startddmmyy(self):
+        return self.teststart.strftime('%d %b %Y')
+    
+    def endddmmyy(self):
+        return self.testend.strftime('%d %b %Y')
+    
+    @property
+    def is_past_now(self):
+        return date.today() < self.testend
+    
