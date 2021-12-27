@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 import homepage.views
 import pasttest.views
 import pastweb.views
+import who.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path('menu/', homepage.views.menu, name='menu'),
     path('test/', pasttest.views.test, name='test'),
     path('web/', pastweb.views.web, name='web'),
+    path('who/', who.views.who, name='who'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
