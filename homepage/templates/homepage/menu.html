@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Test2Impress - Overview of our services">
+    <meta name="author" content="Test2Impress">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Test2Impress - This is what we do</title>
+    <title>Test2Impress - Overview</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
 
@@ -131,11 +131,17 @@
       box-shadow: 5px 15px 20px #2c3540;
     }
 
+    .navbarshadow {
+      box-shadow: 0px 10px 10px #000000a2;
+    }
 
+    .topshadow {
+      box-shadow: 10px 10px 10px #000000a2;
+    }
 </style>
 </head>
   <body>
-    <nav class="navbar px-5 navbar-expand-lg bgdarkblue navbar-dark">
+    <nav class="navbar navbarshadow px-5 navbar-expand-lg bgdarkblue navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'menu' %}"><img class="navbarlogo px-3" src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -146,18 +152,18 @@
                     <a class="nav-link px-2" aria-current="page" href="{% url 'home' %}">Start</a>
                     <a class="nav-link active px-2" href="#">Overview</a>
                     <a class="nav-link px-2" href="{% url 'test'%}#bottom">Testing</a>
-                    <a class="nav-link px-2" href="#">Webdevelopment</a>
+                    <a class="nav-link px-2" href="{% url 'web'%}">Websites</a>
                     <a class="nav-link px-2" href="#">About</a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="bggreen position-relative overflow-hidden p-0 p-md-5 m-md-3 text-center">
+    <div class="bggreen topshadow position-relative overflow-hidden p-0 p-md-5 m-md-3 text-center">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal"><span class="lightyellow"><b>Test</b></span><span class="text-black-50">2Impress</span></h1>
-        <p class="lead font-weight-normal">We <span class="lightyellow"><b>test</b></span> software: from websites to mainframe applications, from integrations to mobile solutions. Software testing is necessary because we all make mistakes and those can be expensive and potentially dangerous, harming you or your company’s reputation.</p>
+        <p class="lead font-weight-normal">We <span class="lightyellow"><b>test</b></span> software: from websites to mainframe applications, from integrations to mobile solutions. Software testing is necessary because we all make mistakes and those mistakes can be expensive and potentially dangerous, harming you or your company’s reputation.</p>
         <p class="lead font-weight-normal">This is where <span class="lightyellow"><b>Test2Impress</b></span> steps in.</p>
-        <a class="btn button" href="#">Past Projects</a>
+        <a class="btn button" href="{% url 'test' %}#bottom">Past Projects</a>
       </div>
       <div class="product-device box-shadow d-none d-md-block"></div>
       <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -171,8 +177,8 @@
           <p class="lead yellow"><span class="lightyellow"><b>Impress</b></span> your customers with a unique website for all devices & browsers!</p>
           <p class="lead yellow">Click on the website below to see some examples.</p>
         </div>
-        <a href="#">
-            <div class="bg-light box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imageleftphone" src="{% static 'Miniwebsite.jpg' %}"></div>
+        <a href="{% url 'web'%}">
+            <div class="bg-light box-shadow topshadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imageleftphone" src="{% static 'Miniwebsite.jpg' %}"></div>
         </a>
       </div>
     
@@ -183,8 +189,8 @@
           <br/>
           <br/>
         </div>
-        <a href="#">
-        <div class="bg-dark box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
+        <a href="mailto:info@test2impress.be">
+        <div class="bg-dark topshadow box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
         </a>
       </div>
     </div>

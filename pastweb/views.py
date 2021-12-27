@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Pastweb
 
-# Create your views here.
+def web(request):
+        webs = Pastweb.objects
+        return render(request, 'pastweb/web.html', {'webs' : webs})
