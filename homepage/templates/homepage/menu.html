@@ -138,6 +138,41 @@
     .topshadow {
       box-shadow: 10px 10px 10px #000000a2;
     }
+
+    #cellphoneright {
+      box-shadow: 10px 10px 10px #000000a2;
+      background-color: #111;
+    }
+
+    #cellphoneright:hover {
+      box-shadow: 20px 20px 20px #000000a2;
+      background-color: #000000;
+    }
+
+    #cellphoneright:active {
+      box-shadow: 20px 20px 20px #000000a2;
+      filter: saturate(150%);
+      transform: translateY(3px);
+    }
+
+    #cellphoneleft {
+      box-shadow: 10px 10px 10px #000000a2;
+      background-color: #ffffff;
+    }
+
+    #cellphoneleft:hover {
+      box-shadow: 20px 20px 20px #000000a2;
+      background-color: #eff2d8;
+    }
+
+    #cellphoneleft:active {
+      box-shadow: 20px 20px 20px #ffffffa2;
+      filter: saturate(150%);
+      transform: translateY(3px);
+    }
+
+
+
 </style>
 </head>
   <body>
@@ -150,10 +185,10 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link px-2" aria-current="page" href="{% url 'home' %}">Start</a>
-                    <a class="nav-link active px-2" href="#">Overview</a>
+                    <a class="nav-link active px-2" href="{% url 'menu' %}">Overview</a>
                     <a class="nav-link px-2" href="{% url 'test'%}#bottom">Testing</a>
                     <a class="nav-link px-2" href="{% url 'web'%}">Websites</a>
-                    <a class="nav-link px-2" href="{% url 'who'%}">About</a>
+                    <a class="nav-link px-2" href="{% url 'who'%}">Contact</a>
                 </div>
             </div>
         </div>
@@ -163,7 +198,7 @@
         <h1 class="display-4 font-weight-normal"><span class="lightyellow"><b>Test</b></span><span class="text-black-50">2Impress</span></h1>
         <p class="lead font-weight-normal">We <span class="lightyellow"><b>test</b></span> software: from websites to mainframe applications, from integrations to mobile solutions. Software testing is necessary because we all make mistakes and those mistakes can be expensive and potentially dangerous, harming you or your company’s reputation.</p>
         <p class="lead font-weight-normal">This is where <span class="lightyellow"><b>Test2Impress</b></span> steps in.</p>
-        <a class="btn button" href="{% url 'test' %}#bottom">Past Projects</a>
+        <a class="btn button" href="{% url 'test' %}#bottom">Have a look at our past projects</a>
       </div>
       <div class="product-device box-shadow d-none d-md-block"></div>
       <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -175,22 +210,21 @@
         <div class="my-3 py-3">
           <h2 class="display-5 text-black-50">Test2<span class="lightyellow"><b>Impress</b></span></h2>
           <p class="lead yellow"><span class="lightyellow"><b>Impress</b></span> your customers with a unique website for all devices & browsers!</p>
-          <p class="lead yellow">Click on the website below to see some examples.</p>
+          <p class="lead yellow">Have a look at some websites we created:</p>
         </div>
         <a href="{% url 'web'%}">
-            <div class="bg-light box-shadow topshadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imageleftphone" src="{% static 'Miniwebsite.jpg' %}"></div>
+            <div id="cellphoneleft" class="box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imageleftphone" src="{% static 'Miniwebsite.jpg' %}"></div>
         </a>
       </div>
     
       <div class="bgyellow mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 py-3">
           <h2 class="darkblue display-5"><b>Test2Impress</b></h2>
-          <p class="lead">Found what you're looking for? Let's get in touch!</p>
-          <br/>
-          <br/>
+          <p class="lead">Found what you're looking for?</p>
+          <p class="lead">Let's get in touch!</p>
         </div>
         <a href="mailto:info@test2impress.be">
-        <div class="bg-dark topshadow box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
+        <div id="cellphoneright" class="box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
         </a>
       </div>
     </div>
