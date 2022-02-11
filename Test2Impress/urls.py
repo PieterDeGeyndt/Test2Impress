@@ -29,4 +29,5 @@ urlpatterns = [
     path('test/', pasttest.views.test, name='test'),
     path('web/', pastweb.views.web, name='web'),
     path('who/', who.views.who, name='who'),
+    path('timeline/',pasttest.views.timeline, name='timeline')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

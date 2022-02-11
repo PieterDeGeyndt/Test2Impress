@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Test2Impress - Overview of our services">
+    <meta name="author" content="Test2Impress">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Test2Impress</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/product/product.css" rel="stylesheet">
+
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/cba82e9257.js" crossorigin="anonymous"></script>
+    <style>
+
+        /* Navbar */
+
+        .navbarbg {
+            background: #032b44;
+        }
+
+        .navbarshadow {
+            box-shadow: 0px 10px 10px #000000a2;
+        }
+
+        /* Footer */
+
+        #footer{
+            position:fixed;
+            bottom:0;
+            background: #032b44;
+            color:#ffffff;
+            width:100%;
+            text-align: center;
+        }
+
+        .afooter {
+            color: #111;
+        }
+
+        .afooter:visited {
+            color: #111;
+        }
+
+        .afooter:hover {
+            color: #111;
+        }
+    </style>
+</head>
+{% url 'home' as home_url %}
+{% url 'menu' as menu_url %}
+{% url 'test' as test_url %}
+{% url 'web' as web_url %}
+{% url 'who' as who_url %}
+<body>
+    <nav class="navbar navbarbg navbarshadow px-5 navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="fs-2 navbar-brand" href="{% url 'home' %}"><img class="navbarlogo px-3"
+                    src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="fs-4 navbar-nav ms-auto">
+                    <a class="nav-link px-2 {% if request.path == menu_url %} active {%endif%}" href="{% url 'menu' %}">{% if request.path == menu_url %} <b>Services</b>{% else %} Services {% endif %}</a>
+                    <a class="nav-link px-2 {% if request.path == test_url %} active {%endif%}" href="{% url 'test'%}">{% if request.path == test_url %} <b>Testing</b>{% else %} Testing {% endif %}</a>
+                    <a class="nav-link px-2 {% if request.path == web_url %} active {%endif%}" href="{% url 'web'%}">{% if request.path == web_url %} <b>Websites</b>{% else %} Websites {% endif %}</a>
+                    <a class="nav-link px-2 {% if request.path == who_url %} active {%endif%}" href="{% url 'who'%}">{% if request.path == who_url %} <b>Contact</b>{% else %} Contact {% endif %}</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!--Footer -->
+    <footer id="footer">
+        <p>&copy;<a href="https://www.Test2Impress.be/" target="_blank" class="text-decoration-none afooter text-white">Test2Impress</a> - {% now "Y" %}.</p>
+    </footer>
+</body>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/vendor/holder.min.js"></script>
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+    
+</script>
+</html>

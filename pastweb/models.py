@@ -5,6 +5,7 @@ class Pastweb(models.Model):
     webtitle = models.CharField(max_length=200, verbose_name='Website Title',default="")
     webbody = models.TextField(verbose_name='Website Body', default="")
     weburl = models.URLField(verbose_name='Website Url', default="")
+    construction = models.BooleanField(verbose_name='Under construction', default="True")
 
     def __str__(self):
         return self.webtitle

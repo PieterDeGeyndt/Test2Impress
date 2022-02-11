@@ -60,7 +60,7 @@ ROOT_URLCONF = 'Test2Impress.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Test2Impress/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

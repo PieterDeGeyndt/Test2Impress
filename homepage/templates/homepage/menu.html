@@ -1,7 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
 <!doctype html>
 <html lang="en">
     {% load static %}
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Test2Impress - Overview of our services">
@@ -20,233 +22,113 @@
 
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/cba82e9257.js" crossorigin="anonymous"></script>
-<style>
+  
+  <style>
 
-/* Backgroundcolors */
+  /*Backgroundcolor*/
+    .bgbody {
+      background: #f2f2f2;
+    }
     
-    .bglightyellow {
-        background: #eff2d8;
-      }
-
-    .bgyellow {
-        background: #d4d9c1;
-      }
-   
-    .bggreen {
-        background: #7d8c84;
-      }
-
-    .bgblue {
-        background: #2c3540;
-      }
-    
-    .bgdarkblue {
-        background: #04050d;
-      }
-
-/* Textcolors */
-    .lightyellow {
-        color:#eff2d8;
+  /*Topcard*/
+    .topshadow {
+      box-shadow: 10px 10px 10px #000000a2;
     }
 
-    .yellow {
-        color:#d4d9c1;
+    .bgtopcard {
+      background:#2b6777;
+      color:#ffffff;
+      height: 50vh;
     }
-
-    .green {
-        color:#7d8c84;
-    }
-
-    .blue {
-        color:#2c3540;
-    }
-
-    .darkblue {
-        color:#04050d;
-    }
-/* Elements */
-
-    .afooter {
-        color: #111;
-      }
-    
-    .afooter:visited {
-        color: #111;
-      }
-    
-    .afooter:hover {
-        color: #111;
-      }
-    
+  
     .imageleftphone {
         border-style: solid;
         border-width: 3px;
         border-color: black;
         width:80%;
         height:80%;
-        object-fit: fill;
+        object-fit:cover;
         margin-top: 50px;
         z-index: 0;
+        position: relative;
     }
 
     .imagerightphone {
         border-style: solid;
         border-width: 3px;
         border-color: black;
-        width:80%;
-        height:80%;
+        width:95%;
+        height:95%;
         z-index: 0;
-        margin-top: 5vh;
+        margin-top: 5.9vh;
         object-fit:fill;
         position:relative;
     }
 
-    .button {
-      color:#04050d;
-      background-color:#eff2d8;
-      border-color:#2c3540;
-      box-shadow: 2px 5px 5px #2c3540;
+  /*Leftcard*/
+    .bgleftcard {
+      background: #52ab98;
+      height:50vh;
+      align-content: center;
+    }
+  
+  /*Rightcard*/
+    .bgrightcard {
+      background: #c8d8e4 ;
     }
 
-    .button:hover {
-      color:#04050d;
-      background-color:#d4d9c1 ;
-      border-color:#2c3540;
-      box-shadow: 5px 15px 20px #2c3540;
-    }
-
-    .button:active {
-      color:#eff2d8;
-      background-color:#2c3540 ;
-      border-color:#2c3540;
-      box-shadow: 5px 15px 20px #eff2d8;
-      filter: saturate(150%);
-      transform: translateY(3px);
-    }
-
-    .button:focus {
-      color:#04050d;
-      background-color:#d4d9c1 ;
-      border-color:#7d8c84;
-      box-shadow: 5px 15px 20px #2c3540;
-    }
-
-    .navbarshadow {
-      box-shadow: 0px 10px 10px #000000a2;
-    }
-
-    .topshadow {
-      box-shadow: 10px 10px 10px #000000a2;
-    }
-
-    #cellphoneright {
-      box-shadow: 10px 10px 10px #000000a2;
-      background-color: #111;
-    }
-
-    #cellphoneright:hover {
-      box-shadow: 20px 20px 20px #000000a2;
-      background-color: #000000;
-    }
-
-    #cellphoneright:active {
-      box-shadow: 20px 20px 20px #000000a2;
-      filter: saturate(150%);
-      transform: translateY(3px);
-    }
-
-    #cellphoneleft {
-      box-shadow: 10px 10px 10px #000000a2;
-      background-color: #ffffff;
-    }
-
-    #cellphoneleft:hover {
-      box-shadow: 20px 20px 20px #000000a2;
-      background-color: #eff2d8;
-    }
-
-    #cellphoneleft:active {
-      box-shadow: 20px 20px 20px #ffffffa2;
-      filter: saturate(150%);
-      transform: translateY(3px);
-    }
-
-
-
-</style>
+  </style>
 </head>
-  <body>
-    <nav class="navbar navbarshadow px-5 navbar-expand-lg bgdarkblue navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'menu' %}"><img class="navbarlogo px-3" src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link px-2" aria-current="page" href="{% url 'home' %}">Start</a>
-                    <a class="nav-link active px-2" href="{% url 'menu' %}">Overview</a>
-                    <a class="nav-link px-2" href="{% url 'test'%}#bottom">Testing</a>
-                    <a class="nav-link px-2" href="{% url 'web'%}">Websites</a>
-                    <a class="nav-link px-2" href="{% url 'who'%}">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="bggreen topshadow position-relative overflow-hidden p-0 p-md-1 m-md-3 text-center">
+
+<body class="bgbody">
+    <div class="bgtopcard topshadow position-relative overflow-hidden p-0 p-md-1 m-md-3 text-center">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal"><span class="lightyellow"><b>Test</b></span><span class="text-black-50">2Impress</span></h1>
-        <p class="lead font-weight-normal">We <span class="lightyellow"><b>test</b></span> software: from websites to mainframe applications, from integrations to mobile solutions. Software testing is necessary because we all make mistakes and those mistakes can be expensive and potentially dangerous, harming you or your company’s reputation.</p>
-        <p class="lead font-weight-normal">This is where <span class="lightyellow"><b>Test2Impress</b></span> steps in.</p>
-        <a class="btn button" href="{% url 'test' %}#bottom">Have a look at our past projects</a>
+        <h1 class="display-2 font-weight-normal"><span class="text-black"><b>Test</b></span><span class="text-white-50">2Impress</span></h1>
+        <p class="lead font-weight-normal">We test software.</p>
+        <p class="lead font-weight-normal">From websites to mainframe applications, from integrations to mobile solutions. Software testing is necessary because we all make mistakes and those mistakes can be expensive and potentially dangerous, harming your or your company’s reputation.</p>
+        <p class="lead font-weight-normal">This is where <b>Test2Impress</b> steps in.</p>
+        <a href="{% url 'test' %}"><button class="btn-lg btn-danger">Testing consultancy</button></a>
       </div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+      <div class="product-device box-shadow d-none d-md-block"><img class="imagerightphone" src="{% static 'Miniwebsite.jpg' %}"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"><img class="imageleftphone" src="{% static 'mainframe.jpg' %}"></div>
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-0 pl-md-0">
-      
-      <div class="bgblue mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5 text-black-50">Test2<span class="lightyellow"><b>Impress</b></span></h2>
-          <p class="lead yellow"><span class="lightyellow"><b>Impress</b></span> your customers with a unique website for all devices & browsers!</p>
-          <p class="lead yellow">Have a look at some websites we created:</p>
+  
+      <div class="bgleftcard topshadow mr-md-3 pt-3 mx-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
+        <div class="my-1 py-1">
+          <h2 class="display-4 text-black-50">Test2<span class="text-black"><b>Impress</b></span></h2>
+          <p class="lead">Impress your customers : let us design & create your website!</p>
+              <a href="{% url 'web' %}"><button class="btn-lg btn-warning">Website design</button></a>
         </div>
-        <a href="{% url 'web'%}">
-            <div id="cellphoneleft" class="box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imageleftphone" src="{% static 'Miniwebsite.jpg' %}"></div>
-        </a>
       </div>
-    
-      <div class="bgyellow mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="darkblue display-5"><b>Test2Impress</b></h2>
-          <p class="lead">Found what you're looking for?</p>
-          <p class="lead">Let's get in touch!</p>
+
+      <div class="bgrightcard topshadow mr-md-3 py-5 mx-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
+        <div class="my-1 py-1">
+          <h2 class="display-4"><span class="text-black-50">Test</span><span class="text-black"><b>2</b></span><span class="text-black-50">Impress</span></h2>
+          <p class="lead text-dark">It always takes 2 to tango so ... get to know us!                                                        </p>
+          <a href="{% url 'who' %}"><button class="btn-lg btn-primary">Who are we?</button></a>
         </div>
-        <a href="mailto:info@test2impress.be">
-        <div id="cellphoneright" class="box-shadow mx-auto mb-0" style="width: 60%; height: 80%; border-radius: 21px 21px 0 0;"><img class="imagerightphone" src="{% static 'Calling.jpeg' %}"></i> </div>
-        </a>
+        
       </div>
     </div>
-     
-    <!--Footer -->
-    <footer class="d-flex justify-content-center bgdarkblue text-white-50">
-        <p>&copy;<a href="https://www.Test2Impress.be/" class="afooter text-white">Test2Impress</a> - {% now "Y" %}.</p>
-    </footer>
 </body>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
+<!-- Scripts -->
+  <!-- Bootstrap core JavaScript
+      ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../../assets/js/vendor/popper.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/vendor/holder.min.js"></script>
+  <script>
+    Holder.addTheme('thumb', {
+      bg: '#55595c',
+      fg: '#eceeef',
+      text: 'Thumbnail'
+    });
+  </script>
+<!-- einde -->
 </html>
+{% endblock %}

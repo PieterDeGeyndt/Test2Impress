@@ -29,11 +29,9 @@ body {
     color:#FFF;
   }
 
-
-.bottombanner{
+.taglinebottomtitle{
   font-size: 20px;
-  background: #2b6777;
-  color:#FFF; 
+  color:#2b6777 
 }
 
   /*Button in first card*/
@@ -110,7 +108,7 @@ img {
 }
 
 .ag-timeline-block {
-  padding: 15px 0;
+  padding: 30px 0;
 }
 .ag-timeline_title-box {
   padding: 0 0 30px;
@@ -140,9 +138,9 @@ img {
   background-color: #52ab98  ;
 
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 50%;
-  bottom: 100px;
+  bottom: 140px;
 
   overflow: hidden;
 
@@ -181,7 +179,7 @@ img {
 }
 
 .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   left:12.5%;
   text-align:center center;
@@ -243,10 +241,10 @@ img {
   -o-box-shadow: 20px 20px 15px #2c3540;
   box-shadow: 20px 20px 15px #2c3540;
 
-  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
-  -o-transition: -o-transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition: -webkit-transform .5s, opacity .5s;
+  -moz-transition: -moz-transform .5s, opacity .5s;
+  -o-transition: -o-transform .5s, opacity .5s;
+  transition: transform .5s, opacity .5s;
 
   position: relative;
 }
@@ -338,10 +336,10 @@ img {
   color:#ffffff;
 }
 .ag-timeline-card_desc {
+  line-height: 1.45;
+
+  font-size: 16px;
   color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: 300;
-  display:block;
 }
 
 
@@ -361,19 +359,14 @@ img {
   .ag-timeline-card_meta-box {
     display: none;
   }
+  .ag-timeline-card_point-box,
   .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-    margin-left:-64%;
+    margin: 0 0 0 8px;
   }
-
-  .ag-timeline_item:nth-child(2) .ag-timeline-card_point-box {
-    margin-left: -35%;
-  }
-
   .ag-timeline-card_point {
     height: 40px;
     line-height: 40px;
     width: 40px;
-    margin-left: 1.5rem;
   }
   .ag-timeline-card_item {
     width: auto;
@@ -397,8 +390,6 @@ img {
   .ag-timeline-card_arrow {
     margin-top: 12px;
   }
-
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -410,7 +401,6 @@ img {
     height: auto;
     width: auto;
   }
-
 }
 
 @media only screen and (max-width: 639px) {
@@ -450,7 +440,7 @@ img {
     <section id="topbanner" class="py-1 text-center">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Scroll down to see our past projects <i class="far fa-arrow-alt-circle-down"></i></h1>
+        <h1 class="fw-light">Improve software testing in your project today!</h1>
         <br/>
       </div>
     </div>
@@ -471,7 +461,7 @@ img {
                 <div class="ag-timeline-card_point">...</div>
               </div>
               <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta"> The future </div>
+                <div class="ag-timeline-card_meta"> Scroll down to see our past projects <i class="far fa-arrow-alt-circle-down"></i></div>
               </div>
             </div>
             <div class="ag-timeline-card_item">
@@ -480,19 +470,17 @@ img {
                   <img src="{% static 'Webistebg.gif'%}" class="ag-timeline-card_img" width="640" height="360">
                 </div>
                 <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Your Project Here?</div>
+                  <div class="ag-timeline-card_title">If you are looking for:</div>
                   <div class="ag-timeline-card_desc">
-                    <br/>
-                    <p><b>If you are looking for:
-                      <br/>
-                      <br/>- A big team player, aiming to bring up the best in every person on the team and by that
+                    <Span>
+                      - A big team player, aiming to bring up the best in every person on the team and by that
                       maximizing the efficiency.
                       <br />- An ISTQB certified tester all about finding the best solutions by custom-tailoring tools,
                       approaches and methods to your project.
                       <br />- A professional with years of experience, able to apply a massive skill set and a thorough
                       knowledge of test management and test automation.
                       <br /> - Someone who can take part in projects of all sizes, be it as a tester, test coordinator
-                      or test manager: there is no challenge we can’t handle!<br /><br /></b></p>
+                      or test manager: there is no challenge we can’t handle!<br /><br /></Span>
                     <a href="{% url 'who' %}"><button class="btn-lg btn">Contact us</button></a>
                   </div>
                 </div>
@@ -517,7 +505,7 @@ img {
                 <div class="ag-timeline-card_info">
                   <div class="ag-timeline-card_title">{{project.testtitle}}</div>
                   <div class="ag-timeline-card_desc">
-                    <p><b>{{project.testbody | linebreaks}}</b></p>
+                    {{project.testbody | linebreaks}}
                   </div>
                 </div>
               </div>
@@ -529,24 +517,15 @@ img {
               <div class="js-timeline-card_point-box ag-timeline-card_point-box">
                 <div class="ag-timeline-card_point">2009</div>
               </div>
+              <div class="taglinebottomtitle"> <b>Past projects...</b></div>
             </div>
           </div>
         </div>
   </section>
-<section class="bottombanner py-1 text-center">
-  <div>
-    <h3>Since you made it all the way down, here are some testimonials from previous projects:</h3>
-    <br/>       
-    <p class="ps-5 text-start text-white lead"><i class="pe-5 fas fa-comments"></i><i><b>"A fantastic, result driven expert tester and test coordinator."</b></i></p>
-    <p class="ps-5 text-start text-white lead"><i class="pe-5 fas fa-comments"></i><i><b>"I really enjoyed working with him for his skills and quality of deliverables but mostly for his superb attitude and great team spirit."</b></i></p>
-    <p class="ps-5 text-start text-white lead"><i class="pe-5 fas fa-comments"></i><i><b>"Pieter has shown to be a team player and a quick learner. He also possesses a great hands on mentality. His positive attitude and energy has made it a pleasure to work with him."</b></i></p>
-    <p class="ps-5 text-start text-white lead"><i class="pe-5 fas fa-comments"></i><i><b>"A must-have when you’re assembling a high-end project team and expect nothing but the best"</b></i></p>
-  </div>
-</section>
 </div>
 </body>
   <!--ButtonToTop -->
-  <a href="{% url 'test' %}#top"><i id="buttontotop" class="fas fa-angle-double-up"><p class="lead">Back to top</p></i></a>
+  <a href="{% url 'timeline' %}#top"><i id="buttontotop" class="fas fa-angle-double-up"></i></a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 (function ($) {
