@@ -4,27 +4,26 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Test2Impress - Overview of our services">
     <meta name="author" content="Test2Impress">
     <link rel="icon" href="{% static 'Webistebg.gif' %}">
 
     <title>Test2Impress</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-static/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
 
         <!-- Bootstrap core CSS -->
-    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
           <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/5.1/examples/navbar-static/navbar-top.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
 
     <style>
-
         /* Navbar */
         #menu{
             position:fixed;
-            width:100%;
+            width:100vw;
             top:0px;
             z-index:1;
         }
@@ -83,11 +82,11 @@
 <body>
     <nav id="menu" class="navbar navbarbg navbarshadow px-5 navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="fs-2 navbar-brand" href="{% url 'home' %}"><img class="navbarlogo px-3" src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="fs-2 navbar-brand" href="{% url 'home' %}"><img class="navbarlogo ps-0" src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="fs-4 navbar-nav ms-auto">
                     <a class="nav-link px-2 {% if request.path == menu_url %} active {%endif%}" href="{% url 'menu' %}">{% if request.path == menu_url %} <b>Services</b>{% else %} Services {% endif %}</a>
                     <a class="nav-link px-2 {% if request.path == test_url %} active {%endif%}" href="{% url 'test'%}">{% if request.path == test_url %} <b>Testing</b>{% else %} Testing {% endif %}</a>
@@ -106,26 +105,5 @@
         <p>&copy;<a href="https://www.Test2Impress.be/" target="_blank" class="text-decoration-none afooter text-white">Test2Impress</a> - {% now "Y" %}.</p>
     </footer>
 </body>
-
-<!-- Scripts -->
-  <!-- Bootstrap core JavaScript
-      ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
-<!-- FontAwesome Kit -->
-  <script src="https://kit.fontawesome.com/cba82e9257.js" crossorigin="anonymous"></script>
-  <script>
-    Holder.addTheme('thumb', {
-      bg: '#55595c',
-      fg: '#eceeef',
-      text: 'Thumbnail'
-    });
-  </script>
-<!-- einde -->
-    
-</script>
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
