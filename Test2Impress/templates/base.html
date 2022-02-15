@@ -22,7 +22,12 @@
     <style>
 
         /* Navbar */
-
+        #menu{
+            position:fixed;
+            width:100%;
+            top:0px;
+            z-index:1;
+        }
         .navbarbg {
             background: #032b44;
         }
@@ -76,7 +81,7 @@
 {% url 'web' as web_url %}
 {% url 'who' as who_url %}
 <body>
-    <nav class="navbar navbarbg navbarshadow px-5 navbar-expand-lg navbar-dark">
+    <nav id="menu" class="navbar navbarbg navbarshadow px-5 navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="fs-2 navbar-brand" href="{% url 'home' %}"><img class="navbarlogo px-3" src="{% static 'Webistebg.gif'%}" height=40px><b>Test2Impress</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
